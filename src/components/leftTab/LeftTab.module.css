@@ -1,0 +1,34 @@
+.imgContainer {
+  margin-bottom: 110px;
+  display: contents;
+}
+
+/* I can reduce code by placing a comma and using both classNames*/
+.imgSearch,
+.imgSourceControl,
+.img,
+.imgAccount,
+.imgExplorer {
+  filter: invert(50%);
+  height: 30px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+.imgExplorer {
+  margin-top: 10px;
+}
+.imgSearch {
+  transform: scaleX(-1);
+}
+
+.imgAccount {
+  margin-top: 930%;
+}
+
+.imgSearch:hover,
+.img:hover,
+.imgSourceControl:hover,
+.imgExplorer:hover,
+.imgAccount:hover {
+  filter: invert(100%);
+}
