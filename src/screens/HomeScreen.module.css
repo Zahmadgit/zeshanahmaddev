@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  grid-template-columns: 55px 190px 1fr; /* left = narrow, middle = medium, right = flexible */
+  height: 100vh; /* optional full screen height */
+}
+
+.left {
+  grid-column: 1;
+  border: 0.01px solid rgb(43, 43, 43);
+}
+
+.middle {
+  grid-column: 2;
+
+  border: 0.01px solid rgb(43, 43, 43);
+}
+
+.right {
+  grid-column: 3;
+  background: rgb(31, 31, 31);
+  border: 0.01px solid rgb(43, 43, 43);
+}

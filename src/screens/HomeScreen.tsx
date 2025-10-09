@@ -1,11 +1,20 @@
-import { useNavigate } from "react-router";
-
+import LeftTab from "../components/leftTab/LeftTab";
+import MiddleTab from "../components/middleTab/MiddleTab";
+import RightTab from "../components/rightTab/RightTab";
+import styles from "./HomeScreen.module.css";
 export default function HomeScreen() {
-  const navigate = useNavigate();
   return (
-    <div>
-      <h1>Home</h1>
-      <button onClick={() => navigate("/about")}>Go to About</button>
+    <div className={styles.container}>
+      <div className={styles.left}>
+        <LeftTab />
+      </div>
+
+      <div className={styles.middle}>
+        <MiddleTab />
+      </div>
+      <div className={styles.right}>
+        <RightTab />
+      </div>
     </div>
   );
 }
