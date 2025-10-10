@@ -1,0 +1,18 @@
+.middleTabContainer {
+  display: flex;
+  flex-direction: row; /* left = narrow, middle = medium, right = flexible */
+  height: 100%; /* optional full screen height */
+}
+
+.resizeHandle {
+  width: 0.05px;
+  cursor: col-resize;
+  background: rgb(43, 43, 43);
+}
+.middleContent {
+  width: 100%;
+  min-width: 100px;
+  max-width: 500px;
+  background-color: rgb(24, 24, 24);
+  overflow: auto;
+}

@@ -2,6 +2,7 @@ import LeftTab from "../components/leftTab/LeftTab";
 import MiddleTab from "../components/middleTab/MiddleTab";
 import RightTab from "../components/rightTab/RightTab";
 import styles from "./HomeScreen.module.css";
+import BottomTab from "../components/bottomTab/BottomTab";
 export default function HomeScreen() {
   return (
     <div className={styles.container}>
@@ -14,6 +15,9 @@ export default function HomeScreen() {
       </div>
       <div className={styles.right}>
         <RightTab />
+      </div>
+      <div className={styles.bottom}>
+        <BottomTab />
       </div>
     </div>
   );

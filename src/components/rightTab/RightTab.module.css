@@ -1,0 +1,23 @@
+.rightTabContainer {
+  display: flex;
+  flex-direction: column; /* left = narrow, middle = medium, right = flexible */
+  height: 100%; /* optional full screen height */
+}
+
+.codebarContainer {
+  flex: 1;
+  overflow: auto;
+}
+
+.resizeHandle {
+  height: 1px;
+  cursor: row-resize;
+  background: rgb(43, 43, 43);
+}
+.terminalContainer {
+  height: 200px;
+  min-height: 50px;
+  max-height: 70%;
+  background-color: rgb(24, 24, 24);
+  overflow: auto;
+}
