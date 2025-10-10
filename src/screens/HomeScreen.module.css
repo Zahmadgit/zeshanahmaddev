@@ -9,13 +9,12 @@
 .left {
   grid-column: 1;
   grid-row: 1;
-  border: 0.01px solid rgb(43, 43, 43);
+  border: 1px solid rgb(43, 43, 43);
 }
 
 .middle {
   grid-column: 2;
   grid-row: 1;
-  border: 0.01px solid rgb(43, 43, 43);
   min-width: 100px;
   max-width: 500px;
   width: auto;
@@ -27,7 +26,6 @@
   display: flex;
   flex-direction: column;
   background: rgb(31, 31, 31);
-  border: 0.01px solid rgb(43, 43, 43);
   min-width: 200px;
 }
 

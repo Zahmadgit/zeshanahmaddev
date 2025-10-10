@@ -12,7 +12,7 @@ export default function MiddleTab() {
       }
       const rectangleSize = containerRef.current.getBoundingClientRect();
       const newWidth = e.clientX - rectangleSize.left;
-      if (newWidth > 100 && newWidth < 500) {
+      if (newWidth > 150 && newWidth < 500) {
         setMiddleWidth(newWidth);
       }
     };
