@@ -50,7 +50,7 @@ p {
 
 .divRightContainer {
   display: flex;
-  width: calc(150px + 10vw);
+  width: calc(300px + 10vw);
 }
 
 .divRightImgContainer {
