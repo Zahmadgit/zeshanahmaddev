@@ -17,10 +17,16 @@ export default function BottomTab() {
         <div className={styles.imgRemoteContainer}>
           <img className={styles.imgAsset1} src={remote} />
         </div>
+        <div className={styles.divBackgroundDefault}>
+          <img className={styles.imgAsset2} src={sourcecontrol} />
+        </div>
+        <div className={styles.divBackgroundDefault}>
+          <p>main*</p>
+        </div>
+        <div className={styles.divBackgroundDefault}>
+          <img className={styles.imgAsset1} src={sync} />
+        </div>
 
-        <img className={styles.imgAsset2} src={sourcecontrol} />
-        <p>main*</p>
-        <img className={styles.imgAsset1} src={sync} />
         <img className={styles.imgAsset3} src={debugdisconnect} />
 
         <img className={styles.imgAsset4} src={error} />
@@ -30,10 +36,11 @@ export default function BottomTab() {
         <p>0</p>
       </div>
       <div className={styles.divRightContainer}>
-        <p>
-          Ln {lineNumber}, Col {columnNumber}
-        </p>
-
+        <div className={styles.divBackgroundDefault}>
+          <p>
+            Ln {lineNumber}, Col {columnNumber}
+          </p>
+        </div>
         <div className={styles.divRightImgContainer}>
           <img className={styles.imgAsset1} src={copilot} />
           <img className={styles.imgAsset1} src={bell} />

@@ -62,3 +62,10 @@ p {
     width: calc(600px + 20vw);
   }
 }
+
+.divBackgroundDefault {
+  background-color: rgb(24, 24, 24);
+}
+.divBackgroundDefault:hover {
+  background-color: rgb(52, 52, 52);
+}
