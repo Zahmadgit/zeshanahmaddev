@@ -1,0 +1,64 @@
+p {
+  height: 0px;
+  font-size: 11px;
+  margin-top: 2px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.bottomContainer {
+  display: flex;
+}
+
+.imgRemoteContainer {
+  background-color: rgb(51, 118, 205);
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgRemoteContainer:hover {
+  background-color: rgb(76, 135, 211);
+}
+
+.imgAsset1,
+.imgAsset2,
+.imgAsset3,
+.imgAsset4 {
+  filter: invert(100%);
+  width: 15px;
+  height: 20px;
+}
+
+.imgAsset2 {
+  margin-left: 5px;
+}
+
+.imgAsset3 {
+  margin-left: 20px;
+}
+
+.imgAsset4 {
+  margin-left: 95px;
+}
+
+.divLeftContainer {
+  display: flex;
+  width: 1400px;
+}
+
+.divRightContainer {
+  display: flex;
+  width: calc(150px + 10vw);
+}
+
+.divRightImgContainer {
+  align-content: end;
+}
+
+@media only screen and (max-width: 600px) {
+  .divRightContainer {
+    width: calc(600px + 20vw);
+  }
+}
