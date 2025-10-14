@@ -31,4 +31,5 @@
 .imgExplorer:hover,
 .imgAccount:hover {
   filter: invert(100%);
+  cursor: pointer;
 }
