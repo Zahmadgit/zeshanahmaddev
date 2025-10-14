@@ -8,6 +8,7 @@ import { FileHighlightContext } from "../utils/contexts/FileHighlightContext";
 
 export default function HomeScreen() {
   const [currentFileHighlight] = useState<string>("resume");
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
