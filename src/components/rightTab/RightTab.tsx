@@ -79,6 +79,9 @@ export default function RightTab() {
           >
             Change the file State to Bruh
           </button>
+          <a href="https://www.youtube.com/watch?v=pV0X1xjFBRc&list=RDpV0X1xjFBRc&start_radio=1">
+            MusicLink
+          </a>
         </div>
       </div>
       <div className={styles.resizeHandle}></div>
