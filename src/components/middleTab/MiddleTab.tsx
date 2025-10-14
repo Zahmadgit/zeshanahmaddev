@@ -125,7 +125,7 @@ const RenderFolderStructure: React.FC<{ folder: FolderType }> = ({
 };
 
 export default function MiddleTab() {
-  const [middleWidth, setMiddleWidth] = useState<number>(200);
+  const [middleWidth, setMiddleWidth] = useState<number>(150);
 
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {

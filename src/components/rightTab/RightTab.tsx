@@ -2,7 +2,7 @@ import TerminalTab from "./TerminalTab";
 import styles from "./RightTab.module.css";
 import { useState, useRef, useEffect } from "react";
 import useCurrentFileState from "../../store/useCurrentFileState";
-
+import audioPath from "../../assets/mp3/noWordsInstrumental.mp3";
 const lorem =
   "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.";
 
@@ -13,6 +13,9 @@ export default function RightTab() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const rightTabNumAmount = useRef(45);
+
+  const [toggleMusic, setToggleMusic] = useState(false);
+  const audioRef = useRef(null);
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       //ref needs to exist
@@ -46,6 +49,15 @@ export default function RightTab() {
       resizeHandle?.removeEventListener("mousedown", handleMouseDown);
     };
   }, []);
+
+  const handleMusicPlayer = () => {
+    if (toggleMusic) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setToggleMusic((prev) => !prev);
+  };
 
   const columnNumbers = [];
   for (let i = 1; i < rightTabNumAmount.current; i++) {
@@ -82,6 +94,15 @@ export default function RightTab() {
           <a href="https://www.youtube.com/watch?v=pV0X1xjFBRc&list=RDpV0X1xjFBRc&start_radio=1">
             MusicLink
           </a>
+          <audio ref={audioRef} src={audioPath} />
+          <button
+            type="button"
+            onClick={() => {
+              handleMusicPlayer();
+            }}
+          >
+            {toggleMusic ? "Stop" : "Play"}
+          </button>
         </div>
       </div>
       <div className={styles.resizeHandle}></div>
