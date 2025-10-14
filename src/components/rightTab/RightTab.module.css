@@ -7,6 +7,8 @@
 .codebarContainer {
   flex: 1;
   overflow: auto;
+  font-size: 12px;
+  color: rgb(197, 148, 124);
 }
 
 .resizeHandle {
@@ -20,4 +22,25 @@
   max-height: 70%;
   background-color: rgb(24, 24, 24);
   overflow: auto;
+}
+
+.numbers {
+  color: rgb(111, 118, 128);
+  text-align: right;
+  margin-bottom: 18px;
+  font-family: monospace;
+  font-size: 12px;
+  margin-left: 25px;
+}
+
+.rightTabText {
+  color: rgb(111, 118, 128);
+  text-align: right;
+  margin-bottom: 18px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.numberAndTextDivider {
+  margin-left: 18px;
 }
