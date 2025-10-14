@@ -7,8 +7,7 @@ import BottomTab from "../components/bottomTab/BottomTab";
 import { FileHighlightContext } from "../utils/contexts/FileHighlightContext";
 
 export default function HomeScreen() {
-  const [currentFileHighlight, setCurrentFileHighLight] =
-    useState<string>("resume");
+  const [currentFileHighlight] = useState<string>("resume");
   return (
     <div className={styles.container}>
       <div className={styles.left}>
