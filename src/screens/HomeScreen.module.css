@@ -3,7 +3,6 @@
   grid-template-columns: 55px auto 1fr; /* left = narrow, middle = medium, right = flexible */
   grid-template-rows: 1fr auto;
   height: 100vh;
-  min-width: 600px;
 }
 
 .left {
