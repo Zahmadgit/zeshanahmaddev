@@ -77,7 +77,7 @@ const fileStructure: FolderType[] = [
 const RenderFolderStructure: React.FC<{ folder: FolderType }> = ({
   folder,
 }) => {
-  const [folderStructure, setFolderStructure] = useState(folder);
+  const [folderStructure] = useState(folder);
   //lets map the array and return an opened and unopened state for each folderName field
 
   // const dropDownNormalizer = (index) => {
