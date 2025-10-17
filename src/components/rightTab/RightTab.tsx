@@ -7,7 +7,7 @@ const lorem =
   "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.";
 
 export default function RightTab() {
-  const [terminalHeight, setTerminalHeight] = useState<number>(200);
+  const [terminalHeight, setTerminalHeight] = useState<number>(150);
   const fileState = useCurrentFileState((state) => state.currentFile);
   const changeFile = useCurrentFileState((state) => state.changeFile);
   const containerRef = useRef<HTMLDivElement>(null);

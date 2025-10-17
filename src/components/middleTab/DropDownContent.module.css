@@ -1,0 +1,39 @@
+.buttonContainer {
+  margin-top: 1px;
+  margin-left: 10px;
+  background: rgb(24, 24, 24);
+}
+
+.buttonContainer :hover {
+  background: rgb(43, 45, 46);
+  cursor: pointer;
+}
+.chevronZeshan {
+  margin-left: 0px;
+  margin-top: 1px;
+}
+
+.buttonFlex {
+  display: flex;
+  flex: "row";
+  /* width: 100%; */
+}
+
+.lineBracket {
+  height: 18px;
+  width: 1px;
+  background: rgb(133, 161, 175);
+  margin-left: 15px;
+}
+
+.dropDownRowFlex {
+  display: flex;
+  flex: "row";
+}
+
+.logos {
+  height: 15px;
+  width: 15px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
