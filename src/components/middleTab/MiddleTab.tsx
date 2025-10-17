@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import ExplorerZeshanDev from "./ExplorerZeshanDev";
 
 export default function MiddleTab() {
-  const [middleWidth, setMiddleWidth] = useState<number>(200);
+  const [middleWidth, setMiddleWidth] = useState<number>(170);
 
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {

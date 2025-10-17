@@ -37,7 +37,7 @@ const DropDownContent = (props: folderStructure) => {
             <div key={item.text}>
               <div className={styles.dropDownRowFlex}>
                 <div className={styles.lineBracket} />
-                <img className={styles.reactLogo} src={item.logo} />
+                <img className={styles.logos} src={item.logo} />
                 <p>{item.text}</p>
               </div>
             </div>
