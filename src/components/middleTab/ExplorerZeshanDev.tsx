@@ -7,6 +7,33 @@ import DropDownContent from "./DropDownContent";
 import type { FolderItem } from "./DropDownContent";
 
 import javascriptPath from "../../assets/icons/javascript.svg";
+import typescriptPath from "../../assets/icons/typescript.svg";
+import javaPath from "../../assets/icons/java.svg";
+import kotlinPath from "../../assets/icons/kotlin.svg";
+import swiftPath from "../../assets/icons/swift.svg";
+import reactPath from "../../assets/icons/react.svg";
+import nodejsPath from "../../assets/icons/nodejs.svg";
+import nextjsPath from "../../assets/icons/nextjs.svg";
+import expoPath from "../../assets/icons/expo.svg";
+import cssPath from "../../assets/icons/css.svg";
+import htmlPath from "../../assets/icons/html.svg";
+import materialuiPath from "../../assets/icons/materialui.svg";
+import tailwindPath from "../../assets/icons/tailwind.svg";
+import azuredevopsPath from "../../assets/icons/azure.svg";
+import awsPath from "../../assets/icons/aws.svg";
+import gitPath from "../../assets/icons/git.svg";
+import dockerPath from "../../assets/icons/docker.svg";
+import jestPath from "../../assets/icons/jest.svg";
+import vitestPath from "../../assets/icons/vitest.svg";
+import rtlPath from "../../assets/icons/reacttestinglibrary.png";
+import storybookPath from "../../assets/icons/storybook.svg";
+import lighthousePath from "../../assets/icons/lighthouse.svg";
+import xcodePath from "../../assets/icons/xcode.png";
+import androidstudioPath from "../../assets/icons/androidstudio.png";
+import postgresqlPath from "../../assets/icons/postgres.svg";
+import mysqlPath from "../../assets/icons/mysql.png";
+import mongodbPath from "../../assets/icons/mongo.png";
+import firestorePath from "../../assets/icons/firestore.svg";
 
 const languages: FolderItem[] = [
   {
@@ -15,132 +42,132 @@ const languages: FolderItem[] = [
   },
   {
     text: "Typescript",
-    logo: "../../assets/icons/typescript.svg",
+    logo: typescriptPath,
   },
   {
     text: "Java",
-    logo: "../../src/assets/icons/java.svg",
+    logo: javaPath,
   },
   {
     text: "Kotlin",
-    logo: "../../src/assets/icons/kotlin.svg",
+    logo: kotlinPath,
   },
   {
     text: "Swift",
-    logo: "../../src/assets/icons/swift.svg",
+    logo: swiftPath,
   },
 ];
 
 const frameworks: FolderItem[] = [
   {
     text: "React",
-    logo: "../../src/assets/icons/react.svg",
+    logo: reactPath,
   },
   {
     text: "ReactNative",
-    logo: "../../src/assets/icons/react.svg",
+    logo: reactPath,
   },
   {
     text: "NodeJS",
-    logo: "../../src/assets/icons/nodejs.svg",
+    logo: nodejsPath,
   },
   {
     text: "NextJS",
-    logo: "../../src/assets/icons/nextjs.svg",
+    logo: nextjsPath,
   },
   {
     text: "Expo",
-    logo: "../../src/assets/icons/expo.svg",
+    logo: expoPath,
   },
 ];
 
 const styling: FolderItem[] = [
   {
     text: "CSS3",
-    logo: "../../src/assets/icons/css.svg",
+    logo: cssPath,
   },
   {
     text: "HTML5",
-    logo: "../../src/assets/icons/html.svg",
+    logo: htmlPath,
   },
   {
     text: "MaterialUI",
-    logo: "../../src/assets/icons/materialUI.svg",
+    logo: materialuiPath,
   },
   {
     text: "Tailwind",
-    logo: "../../src/assets/icons/tailwind.svg",
+    logo: tailwindPath,
   },
 ];
 const versioningCloud: FolderItem[] = [
   {
     text: "AzureDevOps",
-    logo: "../../src/assets/icons/azure.svg",
+    logo: azuredevopsPath,
   },
   {
     text: "AWS",
-    logo: "../../src/assets/icons/aws.svg",
+    logo: awsPath,
   },
 
   {
     text: "Git",
-    logo: "../src/assets/icons/git.svg",
+    logo: gitPath,
   },
 
   {
     text: "Docker",
-    logo: "../../src/assets/icons/docker.svg",
+    logo: dockerPath,
   },
 ];
 
 const testingPerformance: FolderItem[] = [
   {
     text: "Jest",
-    logo: "../../src/assets/icons/jest.svg",
+    logo: jestPath,
   },
   {
     text: "Vitest",
-    logo: "../../src/assets/icons/vitest.svg",
+    logo: vitestPath,
   },
   {
     text: "RTL",
-    logo: "../../src/assets/icons/reacttestinglibrary.png",
+    logo: rtlPath,
   },
   {
     text: "Storybook",
-    logo: "../../src/assets/icons/storybook.svg",
+    logo: storybookPath,
   },
   {
     text: "Lighthouse",
-    logo: "../../src/assets/icons/lighthouse.svg",
+    logo: lighthousePath,
   },
   {
     text: "Xcode",
-    logo: "../../src/assets/icons/xcode.png",
+    logo: xcodePath,
   },
   {
     text: "AndroidStudio",
-    logo: "../../src/assets/icons/androidstudio.png",
+    logo: androidstudioPath,
   },
 ];
 
 const databases: FolderItem[] = [
   {
     text: "PostgreSQL",
-    logo: "../../src/assets/icons/postgres.svg",
+    logo: postgresqlPath,
   },
   {
     text: "MySQL",
-    logo: "../../src/assets/icons/mysql.png",
+    logo: mysqlPath,
   },
 
   {
     text: "MongoDB",
-    logo: "../../src/assets/icons/mongo.png",
+    logo: mongodbPath,
   },
   {
     text: "Firestore",
-    logo: "../../src/assets/icons/firestore.svg",
+    logo: firestorePath,
   },
 ];
 const ExplorerZeshanDev = () => {
