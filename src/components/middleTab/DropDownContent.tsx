@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useCurrentFileState from "../../store/useCurrentFileState";
+// import useCurrentFileState from "../../store/useCurrentFileState";
 import styles from "./DropDownContent.module.css";
 import chevrondownPath from "../../assets/icons/graychevrondown.svg";
 import chevronrightPath from "../../assets/icons/graychevronright.svg";
@@ -16,7 +16,7 @@ interface folderStructure {
 
 const DropDownContent = (props: folderStructure) => {
   const [folderOpenBool, setFolderOpenBool] = useState(false);
-  const changeFile = useCurrentFileState((state) => state.changeFile);
+  // const changeFile = useCurrentFileState((state) => state.changeFile);
   return (
     <div className={styles.dropdownContainer}>
       {folderOpenBool ? (
