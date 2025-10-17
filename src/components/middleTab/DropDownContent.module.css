@@ -1,0 +1,39 @@
+.buttonContainer {
+  margin-top: 1px;
+  margin-left: 10px;
+  background: rgb(24, 24, 24);
+}
+
+.buttonContainer :hover {
+  background: rgb(43, 45, 46);
+  cursor: pointer;
+}
+.chevronZeshan {
+  margin-left: 0px;
+  margin-top: 1px;
+}
+
+.buttonFlex {
+  display: flex;
+  flex: "row";
+  /* width: 100%; */
+}
+
+.lineBracket {
+  height: 17px;
+  width: 1px;
+  background: rgb(133, 161, 175);
+  margin-left: 18px;
+}
+
+.dropDownRowFlex {
+  display: flex;
+  flex: "row";
+}
+
+.reactLogo {
+  height: 10px;
+  width: 10px;
+  margin-top: 6px;
+  margin-left: 3px;
+}
