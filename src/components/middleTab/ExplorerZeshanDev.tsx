@@ -8,140 +8,140 @@ import type { FolderItem } from "./DropDownContent";
 const languages: FolderItem[] = [
   {
     text: "Javascript",
-    logo: "src/assets/icons/javascript.svg",
+    logo: "../../src/assets/icons/javascript.svg",
   },
   {
     text: "Typescript",
-    logo: "src/assets/icons/typescript.svg",
+    logo: "../../src/assets/icons/typescript.svg",
   },
   {
     text: "Java",
-    logo: "src/assets/icons/java.svg",
+    logo: "../../src/assets/icons/java.svg",
   },
   {
     text: "Kotlin",
-    logo: "src/assets/icons/kotlin.svg",
+    logo: "../../src/assets/icons/kotlin.svg",
   },
   {
     text: "Swift",
-    logo: "src/assets/icons/swift.svg",
+    logo: "../../src/assets/icons/swift.svg",
   },
 ];
 
 const frameworks: FolderItem[] = [
   {
     text: "React",
-    logo: "src/assets/icons/react.svg",
+    logo: "../../src/assets/icons/react.svg",
   },
   {
     text: "ReactNative",
-    logo: "src/assets/icons/react.svg",
+    logo: "../../src/assets/icons/react.svg",
   },
   {
     text: "NodeJS",
-    logo: "src/assets/icons/nodejs.svg",
+    logo: "../../src/assets/icons/nodejs.svg",
   },
   {
     text: "NextJS",
-    logo: "src/assets/icons/nextjs.svg",
+    logo: "../../src/assets/icons/nextjs.svg",
   },
   {
     text: "Expo",
-    logo: "src/assets/icons/expo.svg",
+    logo: "../../src/assets/icons/expo.svg",
   },
   {
     text: "Tailwind",
-    logo: "src/assets/icons/tailwind.svg",
+    logo: "../../src/assets/icons/tailwind.svg",
   },
 ];
 
 const styling: FolderItem[] = [
   {
     text: "CSS3",
-    logo: "src/assets/icons/css.svg",
+    logo: "../../src/assets/icons/css.svg",
   },
   {
     text: "HTML5",
-    logo: "src/assets/icons/html.svg",
+    logo: "../../src/assets/icons/html.svg",
   },
   {
     text: "MaterialUI",
-    logo: "src/assets/icons/materialUI.svg",
+    logo: "../../src/assets/icons/materialUI.svg",
   },
   {
     text: "Tailwind",
-    logo: "src/assets/icons/tailwind.svg",
+    logo: "../../src/assets/icons/tailwind.svg",
   },
 ];
 const versioningCloud: FolderItem[] = [
   {
     text: "AzureDevOps",
-    logo: "src/assets/icons/azure.svg",
+    logo: "../../src/assets/icons/azure.svg",
   },
   {
     text: "AWS",
-    logo: "src/assets/icons/aws.svg",
+    logo: "../../src/assets/icons/aws.svg",
   },
 
   {
     text: "Git",
-    logo: "src/assets/icons/git.svg",
+    logo: "../src/assets/icons/git.svg",
   },
 
   {
     text: "Docker",
-    logo: "src/assets/icons/docker.svg",
+    logo: "../../src/assets/icons/docker.svg",
   },
 ];
 
 const testingPerformance: FolderItem[] = [
   {
     text: "Jest",
-    logo: "src/assets/icons/jest.svg",
+    logo: "../../src/assets/icons/jest.svg",
   },
   {
     text: "Vitest",
-    logo: "src/assets/icons/vitest.svg",
+    logo: "../../src/assets/icons/vitest.svg",
   },
   {
     text: "RTL",
-    logo: "src/assets/icons/reacttestinglibrary.png",
+    logo: "../../src/assets/icons/reacttestinglibrary.png",
   },
   {
     text: "Storybook",
-    logo: "src/assets/icons/storybook.svg",
+    logo: "../../src/assets/icons/storybook.svg",
   },
   {
     text: "Lighthouse",
-    logo: "src/assets/icons/lighthouse.svg",
+    logo: "../../src/assets/icons/lighthouse.svg",
   },
   {
     text: "Xcode",
-    logo: "src/assets/icons/xcode.png",
+    logo: "../../src/assets/icons/xcode.png",
   },
   {
     text: "AndroidStudio",
-    logo: "src/assets/icons/androidstudio.png",
+    logo: "../../src/assets/icons/androidstudio.png",
   },
 ];
 
 const databases: FolderItem[] = [
   {
     text: "PostgreSQL",
-    logo: "src/assets/icons/postgres.svg",
+    logo: "../../src/assets/icons/postgres.svg",
   },
   {
     text: "MySQL",
-    logo: "src/assets/icons/mysql.png",
+    logo: "../../src/assets/icons/mysql.png",
   },
 
   {
     text: "MongoDB",
-    logo: "src/assets/icons/mongo.png",
+    logo: "../../src/assets/icons/mongo.png",
   },
   {
     text: "Firestore",
-    logo: "src/assets/icons/firestore.svg",
+    logo: "../../src/assets/icons/firestore.svg",
   },
 ];
 const ExplorerZeshanDev = () => {
