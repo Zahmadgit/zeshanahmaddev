@@ -5,14 +5,17 @@ import ellipsisPath from "../../assets/terminal/ellipsis.svg";
 import styles from "./ExploreZeshanDev.module.css";
 import DropDownContent from "./DropDownContent";
 import type { FolderItem } from "./DropDownContent";
+
+import javascriptPath from "../../assets/icons/javascript.svg";
+
 const languages: FolderItem[] = [
   {
     text: "Javascript",
-    logo: "../../src/assets/icons/javascript.svg",
+    logo: javascriptPath,
   },
   {
     text: "Typescript",
-    logo: "../../src/assets/icons/typescript.svg",
+    logo: "../../assets/icons/typescript.svg",
   },
   {
     text: "Java",
@@ -48,10 +51,6 @@ const frameworks: FolderItem[] = [
   {
     text: "Expo",
     logo: "../../src/assets/icons/expo.svg",
-  },
-  {
-    text: "Tailwind",
-    logo: "../../src/assets/icons/tailwind.svg",
   },
 ];
 
