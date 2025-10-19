@@ -1,7 +1,6 @@
 .rightTabContainer {
   display: flex;
   flex-direction: column; /* left = narrow, middle = medium, right = flexible */
-  flex: 1;
   background-color: rgb(30, 30, 30);
 }
 
@@ -44,4 +43,54 @@
 
 .numberAndTextDivider {
   margin-left: 18px;
+}
+
+.contentContainer {
+  display: flex;
+  height: 652px;
+}
+
+.container {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.tabContainer {
+  height: 30px;
+  border: 0.01px solid rgb(43, 43, 43);
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.focusedTabContainer {
+  font-size: small;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  background: rgb(24, 24, 24);
+
+  height: 29px;
+}
+
+.logos {
+  height: 15px;
+  width: 15px;
+  margin-top: 2px;
+  margin-left: 3px;
+}
+
+.tabAlignment {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 4px;
+}
+
+.tabDivider {
+  height: 29px;
+  border: 0.1px solid rgb(43, 43, 43);
 }

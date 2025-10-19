@@ -1,0 +1,22 @@
+.rightTabContainer {
+  display: flex;
+  flex-direction: column; /* left = narrow, middle = medium, right = flexible */
+  flex: 1;
+  background-color: rgb(30, 30, 30);
+}
+
+.codebarContainer {
+  font-size: 12px;
+  color: rgb(197, 148, 124);
+  overflow-y: scroll;
+  text-overflow: clip;
+  height: 652px;
+}
+
+.rightTabText {
+  color: rgb(111, 118, 128);
+  text-align: right;
+  margin-bottom: 18px;
+  font-family: monospace;
+  font-size: 12px;
+}
