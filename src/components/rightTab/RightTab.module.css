@@ -16,7 +16,7 @@
   background: rgb(43, 43, 43);
 }
 .terminalContainer {
-  height: 200px;
+  height: 150px;
   min-height: 50px;
   max-height: 30%;
   background-color: rgb(24, 24, 24);
@@ -62,6 +62,7 @@
   display: flex;
   flex-direction: row;
   flex: 1;
+  background: rgb(24, 24, 24);
 }
 
 .focusedTabContainer {
@@ -72,8 +73,8 @@
   align-self: center;
   align-items: center;
   background: rgb(24, 24, 24);
-
-  height: 29px;
+  height: 31px;
+  cursor: pointer;
 }
 
 .logos {
@@ -86,7 +87,6 @@
 .tabAlignment {
   display: flex;
   flex-direction: row;
-
   margin-top: 4px;
 }
 

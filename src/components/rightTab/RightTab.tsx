@@ -1,9 +1,10 @@
 import TerminalTab from "./TerminalTab";
 import styles from "./RightTab.module.css";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import useCurrentFileState from "../../store/useCurrentFileState";
 import RightTabContent from "./RightTabContent";
-import circleinfoPath from "../../assets/icons/circleinfo.svg";
+import RightTabTopContent from "./RightTabTopTab";
+
 const lorem =
   "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibu" +
   "s ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis." +
@@ -37,40 +38,25 @@ const lorem =
 const columnNumbers = Array.from({ length: 60 }, (_, i) => i + 1);
 
 export default function RightTab() {
-  const [terminalHeight, setTerminalHeight] = useState<number>(150);
   const fileState = useCurrentFileState((state) => state.currentFile);
-  const changeFile = useCurrentFileState((state) => state.changeFile);
+  const background = [
+    "rgb(24, 24, 24)",
+    "rgb(24, 24, 24)",
+    "rgb(24, 24, 24)",
+    "rgb(24, 24, 24)",
+  ];
+  const tabs = ["Home.md", "Experience.md", "Programming.md", "Project.md"];
 
   return (
     <div className={styles.container}>
       <div className={styles.tabContainer}>
-        <div className={styles.focusedTabContainer}>
-          <div className={styles.tabAlignment}>
-            <img className={styles.logos} src={circleinfoPath} />
-            <p>Home.md</p>
-          </div>
-        </div>
+        <RightTabTopContent tabTitle={tabs[0]} background={background[0]} />
         <div className={styles.tabDivider}></div>
-        <div className={styles.focusedTabContainer}>
-          <div className={styles.tabAlignment}>
-            <img className={styles.logos} src={circleinfoPath} />
-            <p>Experience.md</p>
-          </div>
-        </div>
+        <RightTabTopContent tabTitle={tabs[1]} background={background[1]} />
         <div className={styles.tabDivider}></div>
-        <div className={styles.focusedTabContainer}>
-          <div className={styles.tabAlignment}>
-            <img className={styles.logos} src={circleinfoPath} />
-            <p>Programming.md</p>
-          </div>
-        </div>
+        <RightTabTopContent tabTitle={tabs[2]} background={background[2]} />
         <div className={styles.tabDivider}></div>
-        <div className={styles.focusedTabContainer}>
-          <div className={styles.tabAlignment}>
-            <img className={styles.logos} src={circleinfoPath} />
-            <p>Projects.md</p>
-          </div>
-        </div>
+        <RightTabTopContent tabTitle={tabs[3]} background={background[3]} />
         <div className={styles.tabDivider}></div>
       </div>
 
@@ -86,10 +72,7 @@ export default function RightTab() {
           <div className={styles.numberAndTextDivider}></div>
           <RightTabContent content={lorem} />
         </div>
-        <div
-          className={styles.terminalContainer}
-          style={{ height: terminalHeight }}
-        >
+        <div className={styles.terminalContainer}>
           <TerminalTab />
         </div>
       </div>
