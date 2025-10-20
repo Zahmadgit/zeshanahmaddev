@@ -19,6 +19,8 @@ const RightTabTopContent = (props: propTabs) => {
       style={{
         background:
           fileState === props.tabTitle ? "rgb(31, 31, 31)" : props.background,
+        borderTop:
+          fileState === props.tabTitle ? "2px solid rgb(51, 118, 205)" : "",
       }}
     >
       <div className={styles.tabAlignment}>

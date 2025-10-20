@@ -1,39 +1,10 @@
 import TerminalTab from "./TerminalTab";
 import styles from "./RightTab.module.css";
-import { useState } from "react";
 import useCurrentFileState from "../../store/useCurrentFileState";
 import RightTabContent from "./RightTabContent";
 import RightTabTopContent from "./RightTabTopTab";
-
-const lorem =
-  "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibu" +
-  "s ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis." +
-  "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum" +
-  "egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class " +
-  "aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos." +
-  "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibu" +
-  "s ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis." +
-  "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum" +
-  "egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class " +
-  "aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos." +
-  "s ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis." +
-  "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum" +
-  "egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class " +
-  "aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos." +
-  "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibu" +
-  "s ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis." +
-  "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum" +
-  "egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class " +
-  "aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos." +
-  "s ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis." +
-  "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum" +
-  "egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class " +
-  "aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos." +
-  "s ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis." +
-  "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum" +
-  "egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class " +
-  "aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos." +
-  "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibu";
+//this is going to require type casting when using the values from the json file
+import HomeText from "../../assets/middletabtext/Home.json";
 
 const columnNumbers = Array.from({ length: 60 }, (_, i) => i + 1);
 
@@ -70,7 +41,17 @@ export default function RightTab() {
             ))}
           </div>
           <div className={styles.numberAndTextDivider}></div>
-          <RightTabContent content={lorem} />
+
+          {fileState === "Home.md" ? (
+            <div>
+              <RightTabContent
+                title={(HomeText as { title: string; text: string }).title}
+                text={(HomeText as { title: string; text: string }).text}
+              />
+            </div>
+          ) : (
+            ""
+          )}
         </div>
         <div className={styles.terminalContainer}>
           <TerminalTab />
