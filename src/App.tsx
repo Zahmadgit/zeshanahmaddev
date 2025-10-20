@@ -1,15 +1,18 @@
-// import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
 import { Route, Routes } from "react-router";
 import HomeScreen from "./screens/HomeScreen";
 import AboutScreen from "./screens/AboutScreen";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomeScreen />} />
-      <Route path="/about" element={<AboutScreen />} />
-    </Routes>
+    <QueryClientProvider client={queryClient}>
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/about" element={<AboutScreen />} />
+      </Routes>
+    </QueryClientProvider>
   );
 }
 
