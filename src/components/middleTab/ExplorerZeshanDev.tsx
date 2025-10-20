@@ -1,11 +1,14 @@
 import { useState } from "react";
+
+import styles from "./ExploreZeshanDev.module.css";
+import DropDownContent from "./DropDownContent";
+
+import resumePDFPath from "../../assets/resume/MyResumeZeshanAhmad.pdf";
+
+import type { FolderItem } from "./DropDownContent";
 import chevrondownPath from "../../assets/icons/chevrondown.svg";
 import chevronrightPath from "../../assets/icons/chevronright.svg";
 import ellipsisPath from "../../assets/terminal/ellipsis.svg";
-import styles from "./ExploreZeshanDev.module.css";
-import DropDownContent from "./DropDownContent";
-import type { FolderItem } from "./DropDownContent";
-
 import javascriptPath from "../../assets/icons/javascript.svg";
 import typescriptPath from "../../assets/icons/typescript.svg";
 import javaPath from "../../assets/icons/java.svg";
@@ -172,6 +175,7 @@ const databases: FolderItem[] = [
 ];
 const ExplorerZeshanDev = () => {
   const [folderOpenBool, setFolderOpenBool] = useState(false);
+
   return (
     <div>
       <div className={styles.explorerContainer}>
@@ -218,6 +222,9 @@ const ExplorerZeshanDev = () => {
             <img className={styles.chevronZeshan} src={chevronrightPath} />
             <p className={styles.zeshanText}>ZESHANAHAMDDEV</p>
           </div>
+          <a href={resumePDFPath}>
+            <p>resume.pdf</p>
+          </a>
         </div>
       )}
     </div>
