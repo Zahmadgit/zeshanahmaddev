@@ -11,7 +11,7 @@ export interface commitResponseStructure {
         login: string;
         url: string;
       };
-      created_at: Date;
+      created_at: string;
       payload: {
         discription: null | string;
         full_ref: string;

@@ -51,3 +51,9 @@
   margin-top: 5px;
   overflow-y: auto;
 }
+
+.commitContainer {
+  margin-left: 10px;
+  flex-direction: row;
+  display: flex;
+}

@@ -12,7 +12,7 @@ const useCommitHistroyQuery = () => {
     const response = await axios.get(
       "https://api.github.com/users/zahmadgit/events/public"
     );
-    console.log(response.data);
+    // console.log(response.data);
     return response;
   };
 
