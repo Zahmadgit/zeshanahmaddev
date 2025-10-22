@@ -50,6 +50,7 @@
 .commitHistoryContainer {
   margin-top: 5px;
   overflow-y: auto;
+  max-height: 300px;
 }
 
 .commitContainer {

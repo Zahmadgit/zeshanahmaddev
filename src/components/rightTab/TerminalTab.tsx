@@ -14,9 +14,11 @@ export default function TerminalTab() {
   const timerIndex = useRef(0);
   const dataArray = data;
   const [dataDisplayArray, setDataDisplayArray] = useState<terminalData[]>([]);
+  const scrollRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const timer = setInterval(() => {
       timerIndex.current++;
+
       //this feels silly but whatever, trying to tangle with typescript is sillier
       if (dataArray) {
         setDataDisplayArray((prev) => [
@@ -35,6 +37,13 @@ export default function TerminalTab() {
     };
   }, [dataArray]);
 
+  useEffect(() => {
+    if (scrollRef.current) {
+      //scrollTop is where we scroll to, so setting it to the scrollHeight is basically the end
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [dataDisplayArray]);
+
   return (
     <div className={styles.terminalContainer}>
       <div className={styles.terminalTopTabContainer}>
@@ -47,7 +56,7 @@ export default function TerminalTab() {
           <p className={styles.nodeText}>node</p>
         </div>
       </div>
-      <div className={styles.commitHistoryContainer}>
+      <div className={styles.commitHistoryContainer} ref={scrollRef}>
         {dataDisplayArray.map((item) => (
           <div key={item.id} className={styles.commitContainer}>
             <p>Date: {item.created_at} -</p>
