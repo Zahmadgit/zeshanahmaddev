@@ -1,41 +1,72 @@
-import chevrondo from "../../assets/terminal/chevrondown.svg";
-import add from "../../assets/terminal/add.svg";
-import close from "../../assets/terminal/close.svg";
-import ellipsis from "../../assets/terminal/ellipsis.svg";
-import splithorizontal from "../../assets/terminal/splithorizontal.svg";
 import terminal from "../../assets/terminal/terminal.svg";
-import trash from "../../assets/terminal/trash.svg";
+import useCommitHistroyQuery from "../../api/useCommitHistoryQuery";
 import styles from "../rightTab/TerminalTab.module.css";
+import { useEffect, useRef, useState } from "react";
+
+interface terminalData {
+  id: string;
+  created_at: string;
+  type: string;
+}
+
 export default function TerminalTab() {
+  const { data, isPending, error } = useCommitHistroyQuery();
+  const timerIndex = useRef(0);
+  const dataArray = data;
+  const [dataDisplayArray, setDataDisplayArray] = useState<terminalData[]>([]);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      timerIndex.current++;
+
+      //this feels silly but whatever, trying to tangle with typescript is sillier
+      if (dataArray) {
+        setDataDisplayArray((prev) => [
+          ...prev,
+          dataArray.data[timerIndex.current],
+        ]);
+      }
+      if (timerIndex.current >= 20 && dataArray) {
+        setDataDisplayArray([dataArray.data[0]]);
+        timerIndex.current = 1;
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [dataArray]);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      //scrollTop is where we scroll to, so setting it to the scrollHeight is basically the end
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [dataDisplayArray]);
+
   return (
-    <div>
+    <div className={styles.terminalContainer}>
       <div className={styles.terminalTopTabContainer}>
-        <div>
-          <p className={styles.terminalTopTabText}>PROBLEMS</p>
-        </div>
-        <div>
-          <p className={styles.terminalTopTabText}>OUTPUT</p>
-        </div>
-        <div>
-          <p className={styles.terminalTopTabText}>DEBUG CONSOLE</p>
-        </div>
-        <div>
+        <div className={styles.terminalTextContainer}>
           <p className={styles.terminalTopTabTextTerminal}>TERMINAL</p>
+          <div className={styles.terminalTextUnderLine}></div>
         </div>
-        <div>
-          <p className={styles.terminalTopTabText}>PORTS</p>
-        </div>
-        <div>
-          <p className={styles.terminalTopTabText}>GITLENS</p>
+        <div className={styles.nodeContainer}>
+          <img className={styles.terminalImage} src={terminal} />
+          <p className={styles.nodeText}>node</p>
         </div>
       </div>
-      <img src={chevrondo} />
-      <img src={add} />
-      <img src={close} />
-      <img src={ellipsis} />
-      <img src={splithorizontal} />
-      <img src={terminal} />
-      <img src={trash} />
+      <div className={styles.commitHistoryContainer} ref={scrollRef}>
+        {dataDisplayArray.map((item) => (
+          <div key={item.id} className={styles.commitContainer}>
+            <p>Date: {item.created_at} -</p>
+            <p>Commit: {item.id} - </p>
+            <p> Event Type: {item.type}</p>
+          </div>
+        ))}
+      </div>
+      {isPending ? <p>Loading Commits...</p> : <></>}
+      {error ? <p>Error fetching Commit History...</p> : <></>}
     </div>
   );
 }
