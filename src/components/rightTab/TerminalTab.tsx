@@ -2,29 +2,32 @@ import terminal from "../../assets/terminal/terminal.svg";
 import useCommitHistroyQuery from "../../api/useCommitHistoryQuery";
 import styles from "../rightTab/TerminalTab.module.css";
 import { useEffect, useRef, useState } from "react";
-import type { commitResponseStructure } from "../../types/githubApiTypes";
+
+interface terminalData {
+  id: string;
+  created_at: string;
+  type: string;
+}
 
 export default function TerminalTab() {
   const { data, isPending, error } = useCommitHistroyQuery();
   const timerIndex = useRef(0);
   const dataArray = data;
-  const [dataDisplayArray, setDataDisplayArray] = useState<
-    commitResponseStructure[] | undefined
-  >([]);
+  const [dataDisplayArray, setDataDisplayArray] = useState<terminalData[]>([]);
   useEffect(() => {
     const timer = setInterval(() => {
       timerIndex.current++;
-      setDataDisplayArray((prev) => [
-        ...prev,
-        dataArray?.data[timerIndex.current],
-      ]);
-      if (timerIndex.current >= 20) {
-        setDataDisplayArray([dataArray?.data[0]]);
+      //this feels silly but whatever, trying to tangle with typescript is sillier
+      if (dataArray) {
+        setDataDisplayArray((prev) => [
+          ...prev,
+          dataArray.data[timerIndex.current],
+        ]);
+      }
+      if (timerIndex.current >= 20 && dataArray) {
+        setDataDisplayArray([dataArray.data[0]]);
         timerIndex.current = 1;
       }
-      // if (timerIndex.current >= 16) {
-      //   clearInterval(timer);
-      // }
     }, 1000);
 
     return () => {
