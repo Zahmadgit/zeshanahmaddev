@@ -29,7 +29,7 @@ const DropDownContent = (props: folderStructure) => {
             >
               <div className={styles.buttonFlex}>
                 <img className={styles.chevronZeshan} src={chevrondownPath} />
-                <p>{props.folderName}</p>
+                <p className={styles.textColor}>{props.folderName}</p>
               </div>
             </div>
           </div>
@@ -38,7 +38,7 @@ const DropDownContent = (props: folderStructure) => {
               <div className={styles.dropDownRowFlex}>
                 <div className={styles.lineBracket} />
                 <img className={styles.logos} src={item.logo} />
-                <p>{item.text}</p>
+                <p className={styles.textColor}>{item.text}</p>
               </div>
             </div>
           ))}
@@ -53,7 +53,7 @@ const DropDownContent = (props: folderStructure) => {
             >
               <div className={styles.buttonFlex}>
                 <img className={styles.chevronZeshan} src={chevronrightPath} />
-                <p>{props.folderName}</p>
+                <p className={styles.textColor}>{props.folderName}</p>
               </div>
             </div>
           </div>

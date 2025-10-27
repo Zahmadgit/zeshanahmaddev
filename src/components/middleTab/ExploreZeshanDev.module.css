@@ -36,4 +36,9 @@
 .zeshanText {
   font-family: monospace;
   margin-left: -1px;
+  color: rgb(224, 224, 224);
+}
+
+.linkColor {
+  color: rgb(69, 117, 199);
 }

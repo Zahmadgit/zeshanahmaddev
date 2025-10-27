@@ -21,7 +21,7 @@ export default function BottomTab() {
           <img className={styles.imgAsset2} src={sourcecontrol} />
         </div>
         <div className={styles.divBackgroundDefault}>
-          <p>main*</p>
+          <p className={styles.bottomTabText}>main*</p>
         </div>
         <div className={styles.divBackgroundDefault}>
           <img className={styles.imgAsset1} src={sync} />
@@ -30,14 +30,14 @@ export default function BottomTab() {
         <img className={styles.imgAsset3} src={debugdisconnect} />
 
         <img className={styles.imgAsset4} src={error} />
-        <p>0</p>
+        <p className={styles.bottomTabText}>0</p>
         <img className={styles.imgAsset1} src={warning} />
 
-        <p>0</p>
+        <p className={styles.bottomTabText}>0</p>
       </div>
       <div className={styles.divRightContainer}>
         <div className={styles.divBackgroundDefault}>
-          <p>
+          <p className={styles.bottomTabText}>
             Ln {lineNumber}, Col {columnNumber}
           </p>
         </div>

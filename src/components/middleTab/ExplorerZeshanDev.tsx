@@ -210,6 +210,9 @@ const ExplorerZeshanDev = () => {
           />
 
           <DropDownContent folderName={"databases"} folderContent={databases} />
+          <a href={resumePDFPath}>
+            <p className={styles.linkColor}>resume.pdf</p>
+          </a>
         </div>
       ) : (
         <div>
@@ -223,7 +226,7 @@ const ExplorerZeshanDev = () => {
             <p className={styles.zeshanText}>ZESHANAHAMDDEV</p>
           </div>
           <a href={resumePDFPath}>
-            <p>resume.pdf</p>
+            <p className={styles.linkColor}>resume.pdf</p>
           </a>
         </div>
       )}
