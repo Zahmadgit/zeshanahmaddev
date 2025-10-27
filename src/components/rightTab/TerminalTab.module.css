@@ -56,7 +56,7 @@
 .commitContainer {
   height: 16px;
   margin-left: 10px;
-
+  color: rgb(224, 224, 224);
   flex-direction: row;
   display: flex;
 }

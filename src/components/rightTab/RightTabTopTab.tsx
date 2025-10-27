@@ -25,7 +25,7 @@ const RightTabTopContent = (props: propTabs) => {
     >
       <div className={styles.tabAlignment}>
         <img className={styles.logos} src={circleinfoPath} />
-        <p>{props.tabTitle}</p>
+        <p className={styles.textColor}>{props.tabTitle}</p>
       </div>
     </div>
   );

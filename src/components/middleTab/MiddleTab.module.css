@@ -4,6 +4,7 @@
   height: 100%; /* optional full screen height */
   width: 160px;
   border: 1px rgb(43, 43, 43) solid;
+  background-color: rgb(24, 24, 24);
 }
 
 .middleContent {
