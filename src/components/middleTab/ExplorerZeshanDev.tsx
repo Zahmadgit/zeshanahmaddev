@@ -210,9 +210,9 @@ const ExplorerZeshanDev = () => {
           />
 
           <DropDownContent folderName={"databases"} folderContent={databases} />
-          <a href={resumePDFPath}>
+          {/* <a href={resumePDFPath}>
             <p className={styles.linkColor}>resume.pdf</p>
-          </a>
+          </a> */}
         </div>
       ) : (
         <div>
@@ -225,9 +225,9 @@ const ExplorerZeshanDev = () => {
             <img className={styles.chevronZeshan} src={chevronrightPath} />
             <p className={styles.zeshanText}>ZESHANAHAMDDEV</p>
           </div>
-          <a href={resumePDFPath}>
+          {/* <a href={resumePDFPath}>
             <p className={styles.linkColor}>resume.pdf</p>
-          </a>
+          </a> */}
         </div>
       )}
     </div>
