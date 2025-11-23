@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./ExploreZeshanDev.module.css";
 import DropDownContent from "./DropDownContent";
 
-import resumePDFPath from "../../assets/resume/MyResumeZeshanAhmad.pdf";
+// import resumePDFPath from "../../assets/resume/MyResumeZeshanAhmad.pdf";
 
 import type { FolderItem } from "./DropDownContent";
 import chevrondownPath from "../../assets/icons/chevrondown.svg";
