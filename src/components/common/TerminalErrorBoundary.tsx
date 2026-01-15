@@ -39,10 +39,8 @@ export default class TerminalErrorBoundary extends Component<Props, State> {
             justifyContent: "center",
           }}
         >
-          <div style={{ marginBottom: "8px" }}>❌ Terminal Error</div>
-          <div style={{ fontSize: "11px", opacity: 0.7, lineHeight: "1.4" }}>
-            {this.state.error?.message || "Terminal failed to load"}
-          </div>
+          <div style={{ marginBottom: "8px" }}>I need more commits...</div>
+
           <div
             style={{
               fontSize: "10px",
