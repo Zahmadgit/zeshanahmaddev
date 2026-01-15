@@ -3,6 +3,8 @@ import styles from "./RightTab.module.css";
 import useCurrentFileState from "../../store/useCurrentFileState";
 import RightTabContent from "./RightTabContent";
 import RightTabTopContent from "./RightTabTopTab";
+import TabErrorBoundary from "../common/TabErrorBoundary";
+import TerminalErrorBoundary from "../common/TerminalErrorBoundary";
 //this is going to require type casting when using the values from the json file
 import HomeText from "../../assets/middletabtext/Home.json";
 
@@ -42,19 +44,25 @@ export default function RightTab() {
           </div>
           <div className={styles.numberAndTextDivider}></div>
 
-          {fileState === "Home.md" ? (
-            <div>
-              <RightTabContent
-                title={(HomeText as { title: string; text: string }).title}
-                text={(HomeText as { title: string; text: string }).text}
-              />
-            </div>
-          ) : (
-            ""
-          )}
+          <TabErrorBoundary tabName={`File: ${fileState}`}>
+            {fileState === "Home.md" ? (
+              <div>
+                <RightTabContent
+                  title={(HomeText as { title: string; text: string }).title}
+                  text={(HomeText as { title: string; text: string }).text}
+                />
+              </div>
+            ) : (
+              <div style={{ padding: "20px", color: "gray" }}>
+                Content for {fileState} not available
+              </div>
+            )}
+          </TabErrorBoundary>
         </div>
         <div className={styles.terminalContainer}>
-          <TerminalTab />
+          <TerminalErrorBoundary>
+            <TerminalTab />
+          </TerminalErrorBoundary>
         </div>
       </div>
     </div>

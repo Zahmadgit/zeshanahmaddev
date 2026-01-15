@@ -7,7 +7,7 @@ const useCommitHistroyQuery = () => {
     queryKey: ["commits"],
     queryFn: () => getCommits(),
   });
-
+  //realized this would return an empty array if I hadnt made any public commits recently
   const getCommits = async (): Promise<commitResponseStructure> => {
     const response = await axios.get(
       "https://api.github.com/users/zahmadgit/events/public"
